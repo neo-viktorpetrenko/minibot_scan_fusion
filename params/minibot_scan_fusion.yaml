@@ -1,0 +1,33 @@
+minibot_scan_fusion_node:
+  ros__parameters:
+    lidar1:
+      topic: /lidar1/scan
+      frame: laser_frame1
+      trim:
+        enable_angle_exclusion: true
+        # Remove sector where the robot body is seen by lidar1 (radians)
+        exclude_angle_min: -0.2
+        exclude_angle_max:  1.3
+        enable_range_clip: true
+        range_clip_min: 0.10
+        range_clip_max: 30.0
+
+    lidar2:
+      topic: /lidar2/scan
+      frame: laser_frame2
+      trim:
+        enable_angle_exclusion: true
+        # Remove sector where the robot body is seen by lidar2 (radians)
+        exclude_angle_min: -0.4
+        exclude_angle_max:  1.5
+        enable_range_clip: true
+        # Maximum and Minimum Range Clip
+        range_clip_min: 0.10
+        range_clip_max: 30.0
+
+    output:
+      topic: /lidar_combined/scan
+      frame: laser_frame1
+
+    sync_queue_size: 30
+    tf_cache_seconds: 1.0
