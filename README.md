@@ -9,6 +9,7 @@ The node is not intended to join more than two lidars into one, though you could
 To use this package it is recommended to follow the steps in the ydlidar installation section of the EduArt documentation for the minibot project, as the ydlidar SKD and the ydlidar_ros2_driver as well as port remapping are needed for the T-mini plus lidars.
 
 After building the package, run the node with the launch file:
+
 `ros2 launch minibot_scan_fusion minibot_scan_fusion.launch.py`
 * * *
 For the purpose of transparency: AI was heavily used to create this package but it was tested and used with our minibot robot and has worked flawlessly at the Robocup German Open 2026.
